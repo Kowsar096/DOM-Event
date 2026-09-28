@@ -7,16 +7,38 @@
 </head>
 <body>
     <button id="btn-mouse">Micky Mouse</button>
-    <input id="user-name">
+    <input id="user-name" placeholder="your name" type="text">
+    <input id="user-email" placeholder="your email" type="text">
 
     <script>
         // document.getElementById('btn-mouse')
         // .addEventListener('mouseenter', function(){
         //     console.log('Event trigger')
         // })
-        document.getElementById('btn-mouse')
-        .addEventListener('mouseout', function(){
-            console.log('Event trigger')
+        // document.getElementById('btn-mouse')
+        // .addEventListener('mouseout', function(){
+        //     console.log('Event trigger')
+        // })
+
+        document.getElementById('user-name')
+        .addEventListener('focus', function (){
+            console.log('user about to write')
+        })
+        document.getElementById('user-email')
+        .addEventListener('focus', function (){
+            console.log('user about to write')
+        })
+        document.getElementById('user-name')
+        .addEventListener('blur', function (){
+            console.log('user done with write')
+        })
+        document.getElementById('user-email')
+        .addEventListener('blur', function (){
+            console.log('user done with write')
+        })
+        document.getElementById('user-email')
+        .addEventListener('keydown', function (event){
+            console.log('user done with write', event.target.value)
         })
     </script>
 </body>
